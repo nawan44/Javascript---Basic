@@ -27,9 +27,7 @@ function hari() {
     return namaHari;
 }
 function bulan() {
-    var namaBulan = [
-        "Januari", "Februari", "Maret"
-    ];
+    var namaBulan = ["Januari", "Februari", "Maret"];
     return namaBulan;
 }
 
@@ -43,15 +41,8 @@ for (var value of har) {
     console.log(value); // ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
 }
 
-
 //FOR
 var mon = bulan();
 for (i = 0; i < mon.length; i++) {
     console.log(mon[i]);
 }
-
-
-
-
-
-
