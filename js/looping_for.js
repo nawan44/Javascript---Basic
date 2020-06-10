@@ -46,3 +46,10 @@ for (i = 0; i < size; i++) {
     document.write("</center>");
 }
 
+
+
+//LOOPING FOR OF
+var nama = ["Ada", "Bia", "Cici", "Desi", "Elly"];
+for( var i of nama){
+    console.log(i);
+}
