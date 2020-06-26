@@ -33,3 +33,20 @@ class carBudi {
 
 var carBudiX = new carBudi();
 console.log(carBudiX);     //carBudi {merk1 : "Daihatsu Xenia", type1: "MPV" }
+
+//ARGUMENT CONSTRUCTOR
+class Car2 {
+    constructor(merkcar2, typecar2, pricecar2){
+        this.merk2 = merkcar2;
+        this.type2 = typecar2;
+        this.price2 = pricecar2;
+    }
+}
+
+var carIra = new Car2("Ferrari Enzo", "Sport", 15000000000);
+console.log(carIra.merk2);   //Ferrari Enzo
+console.log(carIra.type2);    //Sport
+
+var carAri = new Car2("Mitsubishi Pajero", "SUV", 750000000);
+console.log(carAri.merk2);    //Mitsubishi Pajero
+console.log(carAri.type2);    //SUV
