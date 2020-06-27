@@ -50,3 +50,52 @@ console.log(carIra.type2);    //Sport
 var carAri = new Car2("Mitsubishi Pajero", "SUV", 750000000);
 console.log(carAri.merk2);    //Mitsubishi Pajero
 console.log(carAri.type2);    //SUV
+
+//CLASS METHOD
+class Car3{
+    constructor(merk3, type3, price3) {
+        this.merk3 = merk3;
+        this.type3 = type3;
+        this.price3 = price3;
+    }
+    starton1(){
+        return "Engine Start";
+    }
+}
+
+var carJudi = new Car3 ("Renault One", "MPV", 45000003);
+console.log( carJudi.merk3);         //Renault One
+console.log(carJudi.starton1());     //MPV
+
+var carJuni = new Car3 ("Jaguar x1", "Sport", 176000003);
+console.log(carJuni.merk3);       //Jaguar x1
+console.log(carJuni.starton1);   //Sport
+
+//CLASS METHOD2
+class Car4 {
+    constructor(owner4, merk4, type4, price4){
+        this.owner4 = owner4;
+        this.merk4 = merk4;
+        this.type4 = type4;
+        this.price4 = price4;
+    }
+    starton2(){
+        return "Engine "+this.merk4+" start";
+    }
+    goesto(place){
+        return "Goes To "+place+" with "+this.merk4;
+    }
+}
+
+var carAceng = new Car4("Aceng", "Mercedes AMG", "Sport", 25000000);
+console.log(carAceng.owner4);       //Aceng
+console.log(carAceng.starton2());   //Engine Mercedes AMG start
+console.log(carAceng.goesto("Bandung")); //
+
+var carEdoy = new Car4("Edoy", "Mc Learn A1", "Sport", 34600000);
+console.log(carEdoy.merk4);        //Mc Learn A1
+console.log(carEdoy.starton2());  //Engine Mc Learn A1 start
+
+
+
+
