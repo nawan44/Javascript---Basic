@@ -97,5 +97,29 @@ console.log(carEdoy.merk4);        //Mc Learn A1
 console.log(carEdoy.starton2());  //Engine Mc Learn A1 start
 
 
+//Making object with constrfuctor Functions
+function Car5 (merk5, type5, price5){
+    this.merk5 = merk5;
+    this.type5 = type5;
+    this.price5 = price5;
+    this.staron3 = function (){
+        return "Engine ON";
+    };
+    this.goesto1 = function (place1){
+        return "Goes To "+place1+" with "+this.merk5;
+    }
+}
+
+var carAkung = new Car5("Daihatsu Luxio", "MPV", 107000000);
+var carFaruk = new Car5("Honda CRV", "SUV", 23500000);
+
+console.log(carAkung.merk5);
+console.log(carFaruk.staron3);
+console.log(carAkung.goesto1("Bali"));
+
+console.log(carAkung instanceof Car5);
+console.log(carFaruk instanceof Car5);
+
+
 
 
