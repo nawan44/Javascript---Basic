@@ -91,7 +91,6 @@ var carAceng = new Car4("Aceng", "Mercedes AMG", "Sport", 25000000);
 console.log(carAceng.owner4);       //Aceng
 console.log(carAceng.starton2());   //Engine Mercedes AMG start
 console.log(carAceng.goesto("Bandung")); //
-
 var carEdoy = new Car4("Edoy", "Mc Learn A1", "Sport", 34600000);
 console.log(carEdoy.merk4);        //Mc Learn A1
 console.log(carEdoy.starton2());  //Engine Mc Learn A1 start
@@ -109,16 +108,56 @@ function Car5 (merk5, type5, price5){
         return "Goes To "+place1+" with "+this.merk5;
     }
 }
-
 var carAkung = new Car5("Daihatsu Luxio", "MPV", 107000000);
 var carFaruk = new Car5("Honda CRV", "SUV", 23500000);
-
 console.log(carAkung.merk5);
 console.log(carFaruk.staron3);
 console.log(carAkung.goesto1("Bali"));
-
 console.log(carAkung instanceof Car5);
 console.log(carFaruk instanceof Car5);
+
+//Making Class Method with Object Prototype
+
+function Car6 (merk6, type6, price6){
+    this.merk6 = merk6;
+    this.type6 = type6;
+    this.price6 = price6;
+}
+Car6.prototype.wheel = 4;
+Car6.prototype.starton6 = function(){
+    return " Engine ON";
+};
+Car6.prototype.goeson = function(place6){
+    return "Pergi ke "+ place6 + " with " + this.merk6 ;
+};
+var carAA = new Car6("Jaguar X6" , "Sport", 1500000999);
+var carAB = new Car6("Nissan Xtrail" , "MPV", 24000923);
+
+console.log(carAA.wheel);
+
+console.log(carAA.goeson("Ciamis"));
+console.log(carAB.goeson("Depok"));
+
+//OBJECT CONSTRUCTOR
+var AAA = 50;
+var ABA = new Number (51);
+var resu = AAA + 5 ;
+console.log(resu);
+console.log(ABA .toString(8));
+
+var BBB = "Hello hihi";
+var BAB = new String ("Hello hahaha");
+var kuy = "sdd " + BBB;
+console.log(kuy);
+console.log(BAB. toUpperCase());
+
+
+
+
+
+
+
+
 
 
 
