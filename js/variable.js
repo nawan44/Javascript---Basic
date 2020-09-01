@@ -1,3 +1,5 @@
+
+//Var
 {
     var a = "Learn Javascript";
     console.log(a);      //Learn Javascript
@@ -34,3 +36,21 @@ for (let l = 1; l < 3; l++){
     console.log("Learn Javascript = " + l);   //Learn Javascript = 1   Learn Javascript = 2
 }
 console.log("Pice = " + l);     //Price = 10000
+
+
+//Const
+const name = 'Rachmat Gunawan';
+const age = '29'
+const isMarried = false;
+const mayArray= [3, 4, 5];
+const myObject = {
+    street = 'KH Ahmad Junaedi',
+    No = 35
+}
+console.log(myObject);
+
+
+//let
+let morning = 'hai';
+morning = 'good';
+console.log(morning);

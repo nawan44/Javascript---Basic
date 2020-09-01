@@ -54,12 +54,33 @@ console.log(AHA.charCodeAt(1));   //101
 console.log(AHA.charCodeAt(7));   //97
 console.log('Learn'.charCodeAt(3));   //114
 
+// const a = { x: 1, y: 2 }; 
+// const b = { x: 100, y: 200 }; 
+// const c = { ...a, ...b }; 
+// console.log(y);
+
+const x = 10; 
+const y = 'Telkom Indonesia'; 
+const z = x > 5 && y; 
+
+console.log(z)
+
+{/* <div variant=”large”></div> */}
 
 
+// const [a, b] = [0, 1, 2, 3]; 
+// console.log(b)
 
+// function bar(){ 
+//     Const foo = []; return foo; } 
+// alert(typeof bar());
 
+// var x = 3; var foo = { x: 2, baz:{ x:1, bar:function(){ return x; } } }
 
+// var go = foo.baz.bar;
 
+// alert(go());
 
+const a = { x: 1, y: 2 }; const b = 'y'; const c = a[b]; console.log(c); 
 
 
