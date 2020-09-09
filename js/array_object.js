@@ -230,41 +230,138 @@ var kaa = [1,2,3,4,5];
 var laa = kaa.map(multiplication10);
 console.log(laa);      //(5) [10, 20, 30, 40, 50]
 
+//Method Array.prototype.filter()
+function complete(element9){
+    if (element9 % 2 === 0){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+var maa = [8,4,7,9,3,2];
+var naa = maa.filter(complete);
+console.log(naa);     //(3) [8, 4, 2]
+
+function big30(element10){
+    if(element10 >= 30) {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+var oaa = [23,60,44,12,34];
+var paa = oaa.filter(big30);
+console.log(paa);     //(3) [60, 44, 34]
+
+//Method Array.prototype.every()
+function even1(element11){
+    if(element11 % 2 === 0){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+var qaa = [6,8,10,12,16];
+console.log(qaa.every(even1));     //true
+
+var raa = [3,8,10,12,16];
+console.log(raa.every(even1));     //false
+
+function big10(element12){
+    return element12 >= 10;
+}
+var saa = [23,60,44,12,34];
+console.log(saa.every(big10));     //true
+var taa = [2,60,44,12,34];
+console.log(taa.every(big10));     //false
+
+//Method Array.prototype.some()
+function even2(element13){
+    return (element13 % 2 === 0);
+}
+var uaa = [6,8,10,12,16];
+console.log(uaa.some(even2));     //true
+var vaa = [3,5,7,9,11,12];
+console.log(vaa.some(even2));     //true
+var waa = [3,7,9,99,41];
+console.log(waa.some(even2));     //false
+
+//Method Array.prototype.find() and Array.prototype.findIndex()
+function even3(element14){
+    return(element14 % 2 === 0);
+}
+var xaa = [5,7,14,12,16];
+console.log(xaa.find(even3));        //14
+console.log(xaa.findIndex(even3));   //2
+
+function big20(element15){
+    return element15 >= 20;
+}
+var yaa = [25,17,24,22,26];
+console.log(yaa.find(big20));        //25
+console.log(yaa.findIndex(big20));   //0
+
+var zaa = [9,3,4,5,6];
+console.log(zaa.find(big20));        //undefined
+console.log(zaa.findIndex(big20));   //-1
+
+var aab = [9,75,17,29,88];
+console.log(aab.find(big20));         //75
+console.log(aab.findIndex(big20));    //1
+
+//Method Array.prototype.reduce() and Array.prototype.reduceRight()
+function increase(total, number) {
+    return total + number;
+}
+var aac = [1, 2, 3, 4, 5];
+console.log(aac.reduce(increase));        //15
+console.log(aac.reduce(increase, 10));    //25
+
+console.log(aac.reduceRight(increase));       //15
+console.log(aac.reduceRight(increase,10));    //25
 
 
+function rank(total1, number1){
+    return total1 + Math.pow(number1, 2);
+}
+var aad = [5, 7, 14];
+console.log(aad.reduce(rank));        //250
+console.log(aad.reduce(rank, 0));     //270
 
+console.log(aad.reduceRight(rank));      //88
+console.log(aad.reduceRight(rank, 0));   //270
 
+//Mehtod Array.prototype.sort()
+var aae = ["Iam", "You", "Love", "Me"]
+aae.sort();
+console.log(aae);     //(4) ["Iam", "Love", "Me", "You"]
 
+var aaf = [3,5,2,8,1,31,22,44,33,11];
+aaf.sort();
+console.log(aaf);     //(10) [1, 11, 2, 22, 3, 31, 33, 44, 5, 8]
 
+function compare(a1, b1){
+    if (a1 < b1){
+        return -1;
+    }
+    if(a1 > b1) {
+        return 1;
+    }
+    return 0;
+}
 
+var aag = [3,5,2,8,1,31,22,44,33,11];
+aag.sort(compare);
+console.log(aag);    //(10) [1, 2, 3, 5, 8, 11, 22, 31, 33, 44]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function compare2(a2, b2){
+    return a2 - b2;
+}
+var aah=[3,5,2,8,1,31,22,44,33,11];
+aah.sort(compare2);
+console.log(aah);     //(10) [1, 2, 3, 5, 8, 11, 22, 31, 33, 44]
