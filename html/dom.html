@@ -15,6 +15,24 @@
     <script>
         console.log(window.document);
         
+        // DOM Tree
+            var faa = document.childNodes[1].childNodes[0];
+            console.log(faa.nodeName);               //HEAD
+            console.log(faa.nodeType);              //1
+            console.log(faa.childNodes);           //NodeList(13) [text, meta, text, meta, text, title, text, meta, text, link, text, script, text]
+            console.log(faa.childNodes.length);   //13
+
+            var gaa = document.childNodes[1].childNodes[1];
+            console.log(gaa.nodeName);               //#text
+            console.log(gaa.nodeType);              //3
+            console.log(gaa.childNodes);           //NodeList []
+            console.log(gaa.childNodes.length);   //0
+
+            var haa = document.childNodes[1].childNodes[2];
+            console.log(haa.nodeName);               //BODY
+            console.log(haa.nodeType);              //1
+            console.log(haa.childNodes);           //NodeList(6) [text, h1, text, p, text, script]
+            console.log(haa.childNodes.length);   //6
     </script>
 </body>
 </html>
