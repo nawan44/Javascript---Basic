@@ -36,6 +36,10 @@ console.log(eaa.nodeType);              //1
 console.log(eaa.childNodes);            //NodeList [head]
 console.log(eaa.childNodes.length);     //#document  
 
+console.log("#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*");
+var headNode1 = document.childNodes[1].childNodes[0];
+var titleNode1 = headNode1.childNodes[3];
+titleNode1.textContent = "Title has changed"
 
 
 
