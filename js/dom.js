@@ -41,6 +41,22 @@ var headNode1 = document.childNodes[1].childNodes[0];
 var titleNode1 = headNode1.childNodes[3];
 titleNode1.textContent = "Title has changed"
 
+console.log("?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#?#")
+var jaa = document.createElement("p");
+console.log(jaa.nodeName);      //p
+console.log(jaa.nodeType);      //1
+console.log(jaa.nodeValue);     //null
+
+var kaa = document.createTextNode("a New Pharagarph")
+console.log(kaa.nodeName);     //#text
+console.log(kaa.nodeType);     //3
+console.log(kaa.nodeValue);    //a New Pharagarph
+
+//Method Node.appendChild()
+var newLNode = document.createElement("L");
+var newTNode = document.createTextNode("New Text");
+newLNode.appendChild(newTNode);
+bodyNode.appendChild(newLNode);
 
 
 
