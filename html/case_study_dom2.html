@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Case Study DOM 2</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='../css/case_study_dom2.css'>
+        <script src='../js/case_study_dom.js'></script>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <p>Never Give Up <em>Good Morning</em><b>from Rachmat Gunawan</b></p>
+        <script>
+            var aaa = document.childNodes[1].childNodes[2];
+            var baa = aaa.childNodes[1];
+            var caa = aaa.childNodes[3];
+            var daa = caa.childNodes[1];
+            var eaa = caa.childNodes[2];
+
+            var faa = document.createElement("table");
+
+            var i, gaa, haa1, haa2, iaa, jaa, kaa;
+            for( i = 1; i <=10; i++ ){
+                gaa = document.createElement("tr");
+                haa1 = document.createElement("td");
+                haa2 = document.createElement("td");
+
+                iaa = document.createTextNode(i+".");
+
+                jaa = Math.floor(Math.random() * (90)) + 10;
+                kaa = document.createTextNode(jaa);
+
+                haa1.appendChild(iaa);
+                haa2.appendChild(kaa);
+
+                gaa.appendChild(haa1);
+                gaa.appendChild(haa2);
+
+                faa.appendChild(gaa);
+            }
+            aaa.insertBefore(faa, caa);
+
+
+ 
+        </script>
+    </body>
+</html>
