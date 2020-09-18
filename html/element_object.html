@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Element Object</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='../css/style.css'>
+        <script src='../js/element_object.js'></script>
+    </head>
+    <body>
+        <h1 id="thema">Learn Javascript
+        </h1>
+        <p>
+            Start Learning
+            <em id="emTag">Javascript</em>
+            <b>Learning DOM</b>
+        </p>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <ol>
+            <li>PHP</li>
+            <li>MySQL</li>
+        </ol>
+        <script>
+            //Method document.getElementById()
+            var aaa = document.getElementById("emTag");
+            console.log(aaa.nodeName); //EM
+            console.log(aaa.nodeType); //1
+            console.log(aaa.childNodes); //NodeList
+            console.log(aaa.textContent); //Javascript
+
+            aaa.textContent = "Document Object"
+
+            var baa = document.getElementById("thema");
+            console.log(baa.nodeName); //EM
+            console.log(baa.nodeType); //1
+            console.log(baa.childNodes); //NodeList
+            console.log(baa.textContent); //Javascript
+
+            baa.textContent = "Learn Object"
+
+            //Method document.getElementsByTagName()
+            var caa = document.getElementsByTagName("li");
+            console.log(caa);
+            // HTMLCollection [ <li>, <li>, <li>, <li>, <li> ]
+            console.log(caa.length);
+            // 5
+            var daa;
+            for (daa of caa) {
+                console.log(daa.textContent);
+            }
+        </script>
+    </body>
+</html>
