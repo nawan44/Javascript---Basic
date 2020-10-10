@@ -1,58 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Element Object</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='stylesheet' type='text/css' media='screen' href='../css/style.css'>
-        <script src='../js/element_object.js'></script>
-    </head>
-    <body>
-        <h1 id="thema">Learn Javascript
-        </h1>
-        <p>
-            Start Learning
-            <em id="emTag">Javascript</em>
-            <b>Learning DOM</b>
-        </p>
-        <ol>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ol>
-        <ol>
-            <li>PHP</li>
-            <li>MySQL</li>
-        </ol>
-        <script>
-            //Method document.getElementById()
-            var aaa = document.getElementById("emTag");
-            console.log(aaa.nodeName); //EM
-            console.log(aaa.nodeType); //1
-            console.log(aaa.childNodes); //NodeList
-            console.log(aaa.textContent); //Javascript
 
-            aaa.textContent = "Document Object"
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Element Object</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/style.css'>
+    <script src='../js/element_object.js'></script>
+</head>
 
-            var baa = document.getElementById("thema");
-            console.log(baa.nodeName); //EM
-            console.log(baa.nodeType); //1
-            console.log(baa.childNodes); //NodeList
-            console.log(baa.textContent); //Javascript
+<body>
+    <h1 id="thema">Learn Javascript
+    </h1>
+    <p>
+        Start Learning
+        <em id="emTag">Javascript</em>
+        <b>Learning DOM</b>
+    </p>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <ol>
+        <li>PHP</li>
+        <li>MySQL</li>
+    </ol>
+    <h2 class="green">Be Web Developer</h2>
+    <em>On Going</em>
+    <b class="green">From Zero To Hero</b>
 
-            baa.textContent = "Learn Object"
+    <h3>Page h3</h3>
+    <a href="#">Menu</a>
 
-            //Method document.getElementsByTagName()
-            var caa = document.getElementsByTagName("li");
-            console.log(caa);
-            // HTMLCollection [ <li>, <li>, <li>, <li>, <li> ]
-            console.log(caa.length);
-            // 5
-            var daa;
-            for (daa of caa) {
-                console.log(daa.textContent);
-            }
-        </script>
-    </body>
+    <script>
+        //Method document.getElementById()
+        var aaa = document.getElementById("emTag");
+        console.log(aaa.nodeName); //EM
+        console.log(aaa.nodeType); //1
+        console.log(aaa.childNodes); //NodeList
+        console.log(aaa.textContent); //Javascript
+
+        aaa.textContent = "Document Object"
+
+        var baa = document.getElementById("thema");
+        console.log(baa.nodeName); //EM
+        console.log(baa.nodeType); //1
+        console.log(baa.childNodes); //NodeList
+        console.log(baa.textContent); //Javascript
+
+        baa.textContent = "Learn Object"
+
+        //Method document.getElementsByTagName()
+        var caa = document.getElementsByTagName("li");
+        console.log(caa);
+        // HTMLCollection [ <li>, <li>, <li>, <li>, <li> ]
+        console.log(caa.length);
+        // 5
+        var daa;
+        for (daa of caa) {
+            console.log(daa.textContent);
+        }
+
+        //Method document.getElementsByClassName()
+        console.log("@@@@@@@@@@@@@@@@@@@@@@@@@")
+        var classNode = document.getElementsByClassName("green");
+        console.log(classNode);        //HTMLCollection(2) [h2.green, b.green]
+
+        console.log(classNode[0].nodeName);        //H2
+        console.log(classNode[0].nodeType);        //1
+        console.log(classNode[0].childNodes);        //NodeList [text]
+
+        console.log(classNode[0].textContent);        //Be Web Developer
+
+        console.log(classNode[1].nodeName);        //B
+        console.log(classNode[1].nodeType);        //1
+        console.log(classNode[1].childNodes);        //NodeList [text]
+
+        console.log(classNode[1].textContent);        //From Zero To Hero
+
+        //Method document.querySelector()
+        var dev = document.querySelector("p b");
+        console.log(dev.nodeName);        //B
+
+        console.log(dev.nodeType);        //1
+        console.log(dev.childNodes);        //NodeList [text]
+
+        console.log(dev.textContent);        //Learning DOM
+
+        //Method document.querySelectorAll()
+        var daa = document.querySelectorAll("li");
+        console.log(daa);        //NodeList(5) [li, li, li, li, li]
+        console.log(daa.length);        //5
+
+        var eaa;
+        for (eaa of daa) {
+            eaa.textContent = "Workshop and Secret"
+        }
+
+
+    </script>
+</body>
+
 </html>
