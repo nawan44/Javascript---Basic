@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Element Inner Puter HTML</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1 id="content1">Learn Web Development</h1>
+    <p>Learn <em>JavaScript</em><b> from Website</b></p>
+
+    <h1 id="content2">Learn Web Development</h1>
+    <p>Learn <em>JavaScript</em><b> from Website</b></p>
+
+    <h1 id="content3">Learn Frontend</h1>
+    <div id="reservoir"></div>
+    <p>List Learning <em>JavaScript</em><b> and React JS</b></p>
+
+    <h1 id="content3">Learn JavaScript</h1>
+    <strong>Learn Frontend <em>JavaScript</em><b> and Vue Js</b></strong>
+    <script>
+        var aaa = document.getElementById("content1");
+        console.log(aaa.innerHTML);     //Learn Web Development
+
+        var baa = document.querySelector("p");
+        console.log(baa.innerHTML);     //Learn <em>JavaScript</em><b> from Website</b>
+
+        console.log("oooooooooooooooooooooooooooooooo")
+        var caa = document.getElementById("content2");
+        caa.innerHTML = "Learn Element Object";
+
+        var daa = document.querySelector("p");
+        daa.innerHTML = "Learn <em>Element Object</em>";
+
+        console.log("oooooooooooooooooooooooooooooooo")
+        var list = "<ol><li>HTML</li><li>CSS</li><li>JavaScript</li></ol>";
+        var eaa = document.querySelector("body");
+        var listBody = eaa.innerHTML;
+        eaa.innerHTML = listBody + list;
+
+        console.log("llllllllllllllllllllllllllllllllll")
+        var faa = document.getElementById("content3");
+        console.log(faa.outerHTML);        //<h1 id="content3">Learn Frontend</h1>
+
+        var gaa = document.querySelector("strong");
+        console.log(gaa.outerHTML);        //<strong>Learn Frontend <em>JavaScript</em><b> and Vue Js</b></strong>
+
+
+
+    </script>
+</body>
+
+</html>
