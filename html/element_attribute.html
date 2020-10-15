@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Element Attribute</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1 id="content1" title="Study">Learn Web Development</h1>
+    <p>Learn <em>JavaScript</em><b> from Website</b></p>
+
+
+    <script>
+        //Method Element.hasAttribute()
+        var aaa = document.getElementById("content1");
+
+        console.log(aaa.hasAttribute("id")); // true
+        console.log(aaa.hasAttribute("title")); // true
+        console.log(aaa.hasAttribute("class")); // false
+        //Method Element.getAttribute()
+        var baa = document.getElementById("content1");
+
+        console.log(baa.getAttribute("id")); // content1
+        console.log(baa.getAttribute("title")); // Study
+        console.log(baa.getAttribute("class")); // null
+
+        baa.setAttribute("id", "content2");
+        baa.setAttribute("title", "Practice");
+        baa.setAttribute("class", "header");
+
+        console.log(baa.getAttribute("id")); // content2
+        console.log(baa.getAttribute("title")); // Practice
+        console.log(baa.getAttribute("class")); // header
+
+
+        // /Method Element.removeAttribute()
+        baa.removeAttribute("title");
+        console.log(baa.getAttribute("title")); // null
+
+        //Property Element.attributes
+        var caa = document.getElementById("content2");
+        console.log(caa.attributes);    //NamedNodeMap {0: id, 1: class, id: id, class: class, length: 2}
+
+        var daa = caa.attributes;
+
+        console.log(daa.length);  //2
+        console.log(daa[0]);   //id = "content2"
+        console.log(daa[1]);    //class = "header"
+
+        var eaa = document.getElementById("content2");
+        eaa.setAttribute("style", "color:red; text-shadow:8px 8px pink");
+
+
+
+
+    </script>
+</body>
+
+</html>
