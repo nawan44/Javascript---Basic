@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Element Style</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        h2 {
+            color: blueviolet;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="content1" style="color: green">Learn Web Development</h1>
+    <p style="background-color: yellow">Learn <em>JavaScript</em><b> from Website</b></p>
+
+    <h2 id="content2">HTML STYLE</h2>
+
+    <script>
+        //Property HTMLElement.style
+        var aaa = document.getElementById("content1");
+        console.log(aaa.style.color);       //green
+
+        var baa = document.querySelector("p");
+        console.log(baa.style.backgroundColor);  //yellow
+
+        aaa.style.color = "red";
+
+        var caa = document.querySelector("em");
+
+        caa.style.backgroundColor = "orange";
+        caa.style.fontSize = "1.5em";
+        caa.style.textDecoration = "underline";
+        caa.style.textAlign = "center";
+        caa.style.border = "3px solid black";
+        caa.style.padding = "20px";
+        caa.style.width = "500px";
+
+        //Method Window.getComputedStyle()
+        var daa = document.getElementById("content2");
+        console.log(daa.style.color);
+
+        var eaa = getComputedStyle(daa, null);
+        console.log(eaa);     //CSSStyle{}
+        console.log(eaa.length);   //316
+        console.log(eaa[0]);       //align-content
+        console.log(eaa[1]);       //align-items
+
+        console.log(eaa.color);      //rgb(138, 43, 226)
+        console.log(eaa.backgroundColor);   //rgb(165, 42, 42)
+        console.log(eaa.backgroundColor.height);   //undefined
+
+
+
+    </script>
+</body>
+
+</html>
