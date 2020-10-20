@@ -40,67 +40,101 @@
     <h1 id="content1" style="color: green">Learn Web Development</h1>
     <p style="background-color: yellow">Learn <em>JavaScript</em><b> from Website</b></p>
 
-    <h2 id="content2">HTML STYLE</h2>
-    <h3 id="content3">CSS STYLE</h2>
+    <h2 id="content2">Content 2 : HTML STYLE</h2>
+    <h3 id="content3">Content 3 : CSS STYLE</h3>
+    <h2 id="content4">Content 4 : DOM Javascript</h2>
+    <h2 id="content5">Content 5 : Bootstrap</h2>
+    <h3 id="content6">Content 6 : SASS</h3>
+    <h2 id="content7">Content 7 : AJAX</h2>
+    <h3 id="content8">Content 8 : API</h3>
 
-        <script>
-            //Property HTMLElement.style
-            var aaa = document.getElementById("content1");
-            console.log(aaa.style.color);       //green
+    <script>
+        //Property HTMLElement.style
+        var aaa = document.getElementById("content1");
+        console.log(aaa.style.color);       //green
 
-            var baa = document.querySelector("p");
-            console.log(baa.style.backgroundColor);  //yellow
+        var baa = document.querySelector("p");
+        console.log(baa.style.backgroundColor);  //yellow
 
-            aaa.style.color = "red";
+        aaa.style.color = "red";
 
-            var caa = document.querySelector("em");
+        var caa = document.querySelector("em");
 
-            caa.style.backgroundColor = "orange";
-            caa.style.fontSize = "1.5em";
-            caa.style.textDecoration = "underline";
-            caa.style.textAlign = "center";
-            caa.style.border = "3px solid black";
-            caa.style.padding = "20px";
-            caa.style.width = "500px";
+        caa.style.backgroundColor = "orange";
+        caa.style.fontSize = "1.5em";
+        caa.style.textDecoration = "underline";
+        caa.style.textAlign = "center";
+        caa.style.border = "3px solid black";
+        caa.style.padding = "20px";
+        caa.style.width = "500px";
 
-            //Method Window.getComputedStyle()
-            var daa = document.getElementById("content2");
-            console.log(daa.style.color);
+        //Method Window.getComputedStyle()
+        var daa = document.getElementById("content2");
+        console.log(daa.style.color);
 
-            var eaa = getComputedStyle(daa, null);
-            console.log(eaa);     //CSSStyle{}
-            console.log(eaa.length);   //316
-            console.log(eaa[0]);       //align-content
-            console.log(eaa[1]);       //align-items
+        var eaa = getComputedStyle(daa, null);
+        console.log(eaa);     //CSSStyle{}
+        console.log(eaa.length);   //316
+        console.log(eaa[0]);       //align-content
+        console.log(eaa[1]);       //align-items
 
-            console.log(eaa.color);      //rgb(138, 43, 226)
-            console.log(eaa.backgroundColor);   //rgb(165, 42, 42)
-            console.log(eaa.backgroundColor.height);   //undefined
+        console.log(eaa.color);      //rgb(138, 43, 226)
+        console.log(eaa.backgroundColor);   //rgb(165, 42, 42)
+        console.log(eaa.backgroundColor.height);   //undefined
 
-            //Property Element.classList
-            var faa = document.getElementById("content3");
-            console.log(faa.classList);  //DOMTokenList(2)
+        //Property Element.classList
+        var faa = document.getElementById("content3");
+        console.log(faa.classList);  //DOMTokenList(2)
 
-            faa.classList.add("need");
-            faa.classList.remove("red");
-            faa.classList.add("green");
+        faa.classList.add("need");
+        faa.classList.remove("red");
+        faa.classList.add("green");
 
-            console.log(faa.classList);    //DOMTokenList(2)
+        console.log(faa.classList);    //DOMTokenList(2)
 
-            console.log(faa.classList.length);    //2
-            console.log(faa.classList.contains("need"));    //true
-            console.log(faa.classList.contains("red"));    //false
+        console.log(faa.classList.length);    //2
+        console.log(faa.classList.contains("need"));    //true
+        console.log(faa.classList.contains("red"));    //false
 
-            //Method document.write()
-            document.write("Write with Javascript <p>");
-            document.write("Write with method document.write");
+        //Method document.write()
+        document.write("Write with Javascript <p>");
+        document.write("Write with method document.write");
 
-            var gaa = document.querySelector("p");
-            document.write(gaa);    // 
-            console.log(gaa);    //
+        var gaa = document.querySelector("p");
+        document.write(gaa);    // 
+        console.log(gaa);    //
+
+        //Event Handler from Method Element
+        function show1() {
+            document.querySelector("p").innerHTML = "Content 4 click";
+        }
+        var haa = document.getElementById("content4");
+        haa.addEventListener("click", show1);
+
+        var iaa = document.getElementById("content6")
+        iaa.addEventListener("click", function () {
+            document.querySelector("p").innerHTML = "Content6 click";
+        });
+
+        function show2() {
+            document.querySelector("p").innerHTML = "Content 7";
+        }
+        function show3() {
+            document.querySelector("p").innerHTML = "Content 8";
+        }
+
+        var jaa = document.getElementById("content 7");
+
+        jaa.addEventListener("click", show2);
+        jaa.addEventListener("dbclick", show3);
 
 
-        </script>
+
+
+
+
+
+    </script>
 </body>
 
 </html>
