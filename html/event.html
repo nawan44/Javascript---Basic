@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        h2 {
+            color: blueviolet;
+            background-color: brown;
+        }
+
+        .need {
+            border: 2px solid black;
+            width: 300px;
+            text-align: center;
+        }
+
+        .red {
+            color: red;
+            padding: 20px;
+        }
+
+        .warning {
+            background-color: blueviolet;
+        }
+
+        .green {
+            color: brown;
+            padding: 10px;
+        }
+
+        h1,
+        h2,
+        div {
+            border: 2px solid black;
+            width: 280px;
+            padding: 10px;
+            text-align: center;
+            color: red;
+            background-color: pink;
+        }
+
+        table,
+        td {
+            border: 1px solid black;
+        }
+
+        td {
+            padding: 10px 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="content1" style="color: green">Learn Web Development</h1>
+    <p style="background-color: yellow">Learn <em>JavaScript</em><b> from Website</b></p>
+
+    <h1 id="content2" style="color: green">HTML</h1>
+    <h1 id="content3" style="color: green">HTML</h1>
+
+    <h1 id="content4">HTML</h1>
+    <h2 id="content5">CSS</h2>
+    <div id="content6">JavaScript</div>
+    <p id="content7"></p>
+
+    <h1 id="content8">HTML</h1>
+    <h2 id="content9">CSS</h2>
+    <div id="content10">JavaScript</div>
+    <p id="content11"></p>
+
+    <h1 id="content12">HTML</h1>
+    <h2 id="content13">CSS</h2>
+    <div id="content14">JavaScript</div>
+    <p id="content15"></p>
+
+    <table>
+        <tr>
+            <td>red</td>
+            <td>blue</td>
+            <td>green</td>
+        </tr>
+        <tr>
+            <td>yellow</td>
+            <td>brown</td>
+            <td>pink</td>
+        </tr>
+        <tr>
+            <td>aqua</td>
+            <td>magenta</td>
+            <td>orange</td>
+        </tr>
+    </table>
+
+    <script>
+        //Event Object
+        var aaa = document.getElementById("content1");
+        aaa.addEventListener("click", function (event) {
+            console.log(event);     //Mouse event
+            console.log(event.target);     //<h1 id = "content1"
+            console.log(event.type);     //click
+            console.log(event.bubbles);     //true
+            console.log(event.cancelable);     //true
+            console.log(event.defaultPrevented);     //false
+            console.log(event.detail);     //1
+            console.log(event.currentTarget);     //<h1 id = "content1"
+            console.log(event.relatedTarget);     //null
+            console.log(event.screenX);     //551
+            console.log(event.screenY);     //203
+            console.log(event.clientX);     //77
+            console.log(event.clientY);     //79
+            console.log(event.button);     //0
+            console.log(event.ctrlKey);     //false
+            console.log(event.shiftKey);     //false
+            console.log(event.altKey);     //false
+        });
+
+        ///$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$?////
+        var baa = document.getElementById("content2");
+        var caa = document.querySelector("p");
+
+        baa.addEventListener("click", function (event) {
+            if (event.ctrlKey === true) {
+                caa.innerHTML = "Button CTRL detect";
+            } else if (event.altKey === true) {
+                caa.innerHTML = "Button ALT detect";
+            }
+            else {
+                caa.innerHTML = "content2 click";
+            }
+        });
+
+        ///$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$?////
+        var daa = document.getElementById("content2");
+        var eaa = document.querySelector("p");
+
+        function show(event) {
+            if (event.ctrlKey === true) {
+                eaa.innerHTML = "Button CTRL detect";
+            } else if (event.altKey === true) {
+                eaa.innerHTML = "Button ALT detect";
+            }
+            else {
+                eaa.innerHTML = "content2 click";
+            }
+        }
+        daa.addEventListener("click", show);
+        ///$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$?////
+        var faa = document.getElementById("content4");
+        var gaa = document.getElementById("content5");
+        var haa = document.getElementById("content6");
+        var iaa = document.getElementById("content7");
+        function show2(e) {
+            iaa.innerHTML = e.target.nodeName;
+        }
+
+        faa.addEventListener("click", show2);
+        gaa.addEventListener("click", show2);
+        haa.addEventListener("click", show2);
+
+        ///$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$?////
+
+        var jaa = document.getElementById("content8");
+        var kaa = document.getElementById("content9");
+        var laa = document.getElementById("content10");
+        var maa = document.getElementById("content11");
+        function show2(f) {
+            var naa = "Learning" + f.target.innerHTML;
+            maa.innerHTML = naa;
+        }
+
+        jaa.addEventListener("click", show2);
+        kaa.addEventListener("click", show2);
+        laa.addEventListener("click", show2);
+
+        ///$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$?////
+
+        var oaa = document.getElementById("content8");
+        var paa = document.getElementById("content9");
+        var qaa = document.getElementById("content10");
+        var raa = document.getElementById("content11");
+        function show2(g) {
+            var saa = g.target.getAttributte("id");
+            if (saa === "content8") {
+                g.target.style.backgroundColor = "red";
+            }
+
+            else if (saa === "content9") {
+                g.target.style.backgroundColor = "blue";
+            }
+            else if (saa === "content=10") {
+                g.target.style.backgroundColor = "green";
+            }
+
+        }
+
+        oaa.addEventListener("click", show2);
+        paa.addEventListener("click", show2);
+        qaa.addEventListener("click", show2);
+        ///$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$?////
+
+
+        var taa = document.querySelector("table");
+
+        function changeColor(h) {
+            h.target.style.backgroundColor = h.target.innerHTML;
+        }
+
+        taa.addEventListener("click", changeColor);
+
+
+    </script>
+</body>
+
+</html>
