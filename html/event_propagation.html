@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event Propagation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        .container {
+            padding: 50px;
+            background-color: cornflowerblue;
+        }
+
+        span {
+            background-color: crimson;
+            padding: 50px;
+            width: 100%;
+        }
+
+        p {
+            background-color: brown;
+        }
+
+        h1 {
+            color: green;
+
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        h3 {
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="content1">Learn <em> Web Development</em></h1>
+    </div>
+    <br />
+
+    <span>
+        <h2 id="content2">Learn <strong> Web Development</strong></h2>
+    </span>
+    <p>
+    <h3 id="content3">Learn <u> Web Development</u></h3>
+
+    </p>
+    <script>
+        //Event Propagation Basic
+        var aaa = document.querySelector("em");
+        var baa = document.querySelector("h1");
+        var caa = document.querySelector("div");
+
+        function showEm() {
+            console.log("Em Tag click");
+        }
+        function showH1() {
+            console.log("H1 tag click");
+        }
+        function showDiv() {
+            console.log(" Div tag click");
+        }
+        caa.addEventListener("click", showDiv);
+        baa.addEventListener("click", showH1);
+        aaa.addEventListener("click", showEm);
+
+        //Event Propagation Bubling
+        var daa = document.querySelector("strong");
+        var eaa = document.querySelector("h2");
+        var faa = document.querySelector("span");
+
+        function showStrong() {
+            console.log("Strong tag click");
+        }
+        function showH2() {
+            console.log("h2 tag click");
+        }
+        function showSpan() {
+            console.log("Span tag click");
+        }
+        faa.addEventListener("click", showStrong);
+        eaa.addEventListener("click", showH2);
+        daa.addEventListener("click", showSpan);
+
+        //Event Propagation Bubling
+        var gaa = document.querySelector("strong");
+        var haa = document.querySelector("h2");
+        var iaa = document.querySelector("span");
+
+        function showU(a) {
+            console.log("Underline tag click");
+            a.stopPropagation();
+        }
+        function showH3(a) {
+            console.log("H3 tag click");
+            a.stopPropagation();
+        }
+        function showP(a) {
+            console.log("P tag click");
+            a.stopPropagation();
+        }
+
+        iaa.addEventListener("click", showP);
+        haa.addEventListener("click", showH3);
+        gaa.addEventListener("click", showU);
+
+
+    </script>
+</body>
+
+</html>
