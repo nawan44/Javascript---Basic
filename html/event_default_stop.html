@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>event Default Stop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        /* .container {
+            padding: 50px;
+            background-color: cornflowerblue;
+        }
+
+        span {
+            background-color: crimson;
+            padding: 50px;
+            width: 100%;
+        }
+
+        p {
+            background-color: brown;
+        }
+
+        h1 {
+            color: green;
+
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        h3 {
+            color: chartreuse;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="dom.html">Learn JavaScript </a>
+    </div>
+    <div class="container">
+        <em>Learn JavaScript </em>
+    </div>
+    <script>
+        //Event Default Stop
+        function show() {
+            alert("Link click");
+        }
+
+        var aaa = document.querySelector("a");
+        aaa.addEventListener("click", show());
+
+        //44444444444444444444
+        function show1(e) {
+            alert("Link click");
+            e.preventDefault();
+        }
+
+        var baa = document.querySelector("em");
+        baa.addEventListener("click", show1);
+    </script>
+</body>
+
+</html>
