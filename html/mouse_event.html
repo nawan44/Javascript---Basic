@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mouse Event</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        div {
+            border: 3px solid black;
+            width: 500px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        p {
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 20px;
+            margin: 30px auto;
+        }
+
+        hr {
+            margin-top: 50px;
+        }
+
+        .container1 {
+            margin: 0 0 10px 0;
+        }
+
+        .container2 {
+            margin: 10px 0 130px 0;
+        }
+
+        .container3 {
+            margin: 30px 0 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <div>Cursor mouse here</div>
+    </div>
+    <br />
+    <hr color="red" width="100%" />
+    <br />
+    <div class="container2">
+        <div id="div1">
+            <p>Mouse Over and Out</p>
+        </div>
+        <div id="div2">
+            <p>Mouse Enter and Leave</p>
+        </div>
+    </div>
+    <br />
+    <hr color="red" width="100%" />
+    <br />
+    <div class="container3">
+        <div>Cursor mouse here</div>
+        <p>
+            Koordinat (screen): X = <span id="sumbuXS"></span>
+            Y = <span id="sumbuYS"></span>
+        </p>
+        <p>
+            Koordinat (client): X = <span id="sumbuXC"></span>
+            Y = <span id="sumbuYC"></span>
+        </p>
+    </div>
+    <br />
+    <hr color="red" width="100%" />
+    <br />
+
+
+
+    <script>
+        //Mouse Event
+        function mouseoverEvent(a) {
+            a.target.style.backgroundColor = "Lavender";
+            a.target.innerHTML = "event mouseover";
+        }
+
+        function mouseoutEvent(a) {
+            a.target.style.backgroundColor = "Aquamarine";
+            a.target.innerHTML = "event mouseout";
+        }
+
+        function mousedownEvent(a) {
+            a.target.style.backgroundColor = "Moccasin";
+            a.target.innerHTML = "event mousedown";
+        }
+
+        function mouseupEvent(a) {
+            a.target.style.backgroundColor = "LightGreen";
+            a.target.innerHTML = "event mouseup";
+        }
+
+        var divNode = document.querySelector("div");
+        divNode.addEventListener("mouseover", mouseoverEvent);
+        divNode.addEventListener("mouseout", mouseoutEvent);
+        divNode.addEventListener("mousedown", mousedownEvent);
+        divNode.addEventListener("mouseup", mouseupEvent);
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        function keLavender(b) {
+            b.target.style.backgroundColor = "Lavender";
+        }
+
+        function keAquamarine(b) {
+            b.target.style.backgroundColor = "Aquamarine";
+        }
+
+        var divNode1 = document.getElementById("div1");
+        divNode1.addEventListener("mouseover", keLavender);
+        divNode1.addEventListener("mouseout", keAquamarine);
+
+        var divNode2 = document.getElementById("div2");
+        divNode2.addEventListener("mouseenter", keLavender);
+        divNode2.addEventListener("mouseleave", keAquamarine);
+
+        //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+        // function mousemoveEvent(c) {
+        //     spanXSNode.innerHTML = c.screenX;
+        //     spanYSNode.innerHTML = c.screenY;
+        //     spanXCNode.innerHTML = c.clientX;
+        //     spanYCNode.innerHTML = c.clientY;
+        // }
+        // var divNode = document.querySelector("div");
+        // var spanXSNode = document.getElementById("sumbuXS");
+        // var spanYSNode = document.getElementById("sumbuYS");
+        // var spanXCNode = document.getElementById("sumbuXC");
+        // var spanYCNode = document.getElementById("sumbuYC");
+
+        // divNode.addEventListener("mousemove", mousemoveEvent);
+
+
+
+
+    </script>
+</body>
+
+</html>
