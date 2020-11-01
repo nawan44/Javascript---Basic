@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="myForm" name="myForm" method="get" action="proses.php">
+            <p>Username: <input type="text" name="username" id="username"></p>
+            <p><input type="checkbox" name="js" id="js" value="Belajar JavaScript">Belajar JavaScript</p>
+            <p><input type="submit" name="submit" id="submit" value="Kirim Data"></p>
+        </form>
+    </div>
+    <br />
+
+    <script>
+        //Form
+        var aaa = document.getElementById("myForm");
+        var baa = document.getElementById("username");
+        var caa = document.getElementById("js");
+        var daa = document.getElementById("submit");
+
+        console.log(aaa);
+        console.log(baa);
+        console.log(caa);
+        console.log(daa);
+
+
+        var eaa = document.forms[0];
+        var faa = document.forms[0][0];
+        var gaa = document.forms[0][1];
+        var haa = document.forms[0][2];
+
+        console.log(eaa);
+        console.log(faa);
+        console.log(gaa);
+        console.log(haa);
+        console.log(eaa.length);
+
+        var iaa = document.forms.myForm;
+        var jaa = document.forms.myForm.username;
+        var kaa = document.forms.myForm.js;
+        var laa = document.forms.myForm.submit;
+
+        console.log(iaa);
+        console.log(jaa);
+        console.log(kaa);
+        console.log(laa);
+
+    </script>
+</body>
+
+</html>
