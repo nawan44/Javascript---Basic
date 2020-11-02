@@ -30,10 +30,10 @@
         var caa = document.getElementById("js");
         var daa = document.getElementById("submit");
 
-        console.log(aaa);
-        console.log(baa);
-        console.log(caa);
-        console.log(daa);
+        console.log(aaa);   //<form>
+        console.log(baa);   //<input>
+        console.log(caa);   //<input>
+        console.log(daa);   //<input>
 
 
         var eaa = document.forms[0];
@@ -41,21 +41,32 @@
         var gaa = document.forms[0][1];
         var haa = document.forms[0][2];
 
-        console.log(eaa);
-        console.log(faa);
-        console.log(gaa);
-        console.log(haa);
-        console.log(eaa.length);
+        console.log(eaa);   //<form>
+        console.log(faa);   //<input>
+        console.log(gaa);   //<input>
+        console.log(haa);   //<input>
+        console.log(eaa.length);   //3
 
         var iaa = document.forms.myForm;
         var jaa = document.forms.myForm.username;
         var kaa = document.forms.myForm.js;
         var laa = document.forms.myForm.submit;
 
-        console.log(iaa);
-        console.log(jaa);
-        console.log(kaa);
-        console.log(laa);
+        console.log(iaa);   //<form>
+        console.log(jaa);   //<input>
+        console.log(kaa);   //<input>
+        console.log(laa);   //<input>
+        //Form Element Property
+        console.log(aaa.elements);   //HTML
+        console.log(aaa.length);   //3
+        console.log(aaa.name);   //myForm
+        console.log(aaa.method);   //get
+        console.log(aaa.target);   //
+        console.log(aaa.action);   //http://127.0.0.1:500
+        console.log(aaa.acceptCharset);   //
+        console.log(aaa.encoding);   //application/x-www
+
+
 
     </script>
 </body>
