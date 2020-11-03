@@ -19,6 +19,9 @@
             <p>Username: <input type="text" name="username" id="username"></p>
             <p><input type="checkbox" name="js" id="js" value="Belajar JavaScript">Belajar JavaScript</p>
             <p><input type="submit" name="submit" id="submit" value="Kirim Data"></p>
+        <p><span id="spanSubmit">Submit Form</span>
+ <span id="spanReset">Reset Form</span></p>
+ <input type="reset" name="reset" id="reset" value="Reset Form"></p>
         </form>
     </div>
     <br />
@@ -66,6 +69,24 @@
         console.log(aaa.acceptCharset);   //
         console.log(aaa.encoding);   //application/x-www
 
+        // Form Element: Method
+        var maa = document.getElementById("spanSubmit");
+        var naa = document.getElementById("spanReset");
+
+        function onSubmit(){ aaa.submit(); }
+        function onReset(){ aaa.reset(); }
+
+        maa.addEventListener("click", onSubmit);
+        naa.addEventListener("click", onReset);
+
+        // Form Element: Event
+        function onStop(a){
+        console.log(a.type);
+        a.preventDefault();
+        console.log(a.defaultPrevented);
+        }
+        aaa.addEventListener("submit",onStop);
+        aaa.addEventListener("reset",onStop);
 
 
     </script>
