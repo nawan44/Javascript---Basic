@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form Input</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="myForm" name="myForm" method="get" action="proses.php">
+            <p>Username: <input type="text" name="username" id="username"></p>
+            <p><input type="submit" name="submit" id="submit" value="Copy Data"></p>
+        </form>
+        <p>result: <input type="text" id="result"></p>
+
+    </div>
+    <br />
+
+    <script>
+        //Form Input Element
+        // var formNode = document.getElementById("myForm");
+        // var usernameNode = document.getElementById("username");
+        // var resultNode = document.getElementById("result");
+
+        // function diProses(e) {
+        //     e.preventDefault();
+        //     console.log(usernameNode.form);
+        //     // <form id="myForm" name="myForm" method="get" action="proses.php">
+        //     console.log(usernameNode.name); // username
+        //     console.log(usernameNode.type); // text
+        //     console.log(usernameNode.autofocus); // false
+        //     console.log(usernameNode.value); // Rachmat
+        //     console.log(usernameNode.maxLength); // -1
+        //     console.log(usernameNode.size); // 20
+        //     console.log(usernameNode.readOnly); // false
+        //     console.log(usernameNode.placeholder); // 
+
+        //     resultNode.value = usernameNode.value;
+        //     resultNode.disabled = "true";
+        // }
+        // formNode.addEventListener("submit", diProses);
+
+        var formNode = document.getElementById("myForm");
+        var usernameNode = document.getElementById("username");
+        var resultNode = document.getElementById("result");
+
+        function diProses(e) {
+            e.preventDefault();
+            resultNode.value = usernameNode.value;
+            resultNode.disabled = "true";
+        }
+        formNode.addEventListener("submit", diProses);
+
+
+
+    </script>
+</body>
+
+</html>
